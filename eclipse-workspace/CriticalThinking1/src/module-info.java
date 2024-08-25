@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module CriticalThinking1 {
-}
