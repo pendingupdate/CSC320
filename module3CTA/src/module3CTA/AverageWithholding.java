@@ -23,10 +23,10 @@ public class AverageWithholding {
 			// Convert String userIncome into double weeklyIncome for mathematical comparisons in if statement conditionals
 		weeklyIncome = Double.valueOf(userIncome);
 		
-			// Use if-then and if-else to find tax rate for user's income bracket
+			// Use if-else selection structure to find tax rate for user's income bracket
 		if (weeklyIncome < 500.00) 
 			taxRate = 0.10;
-		else if (weeklyIncome >= 500.00 && weeklyIncome <= 1500.00)
+		else if (weeklyIncome >= 500.00 && weeklyIncome < 1500.00)
 			taxRate = 0.15;			
 		else if (weeklyIncome >= 1500.00 && weeklyIncome < 2500.00)
 			taxRate = 0.20;
@@ -37,7 +37,9 @@ public class AverageWithholding {
 			// Calculate weekly tax withheld
 		weeklyTaxWithheld = weeklyIncome * taxRate;
 			
-			// Print results 
+			// Print user's tax rate as a percentage 
+		System.out.print("Your tax rate is " + taxRate*100 + "%.\n");
+			// Print cash amount withheld from user's weekly income for taxes
 		System.out.printf("The average weekly tax withheld from your income is " + "$%, .2f", weeklyTaxWithheld);
 			
 			// Close scanner
